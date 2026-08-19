@@ -135,14 +135,14 @@ Key constants:
 
 The conversion must be implemented as a pure static method with no external
 dependencies. Unit tests must cover the reference point
-(N 28 001.642, E 38 744.572) → (1.366 666°N, 103.833 333°E) and at least two
+(N 38 744.572, E 28 001.642) → (1.366 666°N, 103.833 333°E) and at least two
 additional known Singapore locations.
 
 ### 4.3 data.gov.sg Polling
 
 - Endpoint: `https://api.data.gov.sg/v1/transport/carpark-availability`
 - Method: `GET`
-- Authentication: `Authorization: ****** request header.
+- Authentication: `Authorization: <ApiKey>` request header using the value of `DATAGOVSG__APIKEY`.
 - Polling interval: 60 s via `PeriodicTimer` inside an `IHostedService`.
 - The hosted service stores the last successful `ApiResponse` and the
   `DateTimeOffset fetchedAt` timestamp in a thread-safe singleton
