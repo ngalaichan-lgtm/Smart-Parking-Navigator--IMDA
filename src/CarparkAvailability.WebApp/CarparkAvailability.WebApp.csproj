@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <ProjectReference Include="..\CarparkAvailability.ServiceDefaults\CarparkAvailability.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>
